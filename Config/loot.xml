@@ -1,0 +1,2065 @@
+<configs>
+	<append xpath="/lootcontainers">
+		<!-- zombieWight loot -->
+		<lootgroup name="BW19Loot_zombieWightT0" loot_quality_template="QLTemplateT0">
+			<item name="drugVitamins" count="1,2"/>
+			<item name="resourceCloth" count="5,7"/>
+			<item name="foodShamSandwich"/>
+			<item name="meleeWpnBladeT0BoneKnife"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieWightT1" loot_quality_template="QLTemplateT1">
+			<item name="resourceBulletTip" count="15,20"/>
+			<item name="drugSteroids" count="1,2"/>
+			<item name="resourceBuckshot" count="10,25"/>
+			<item name="toolBeaker"/>
+			<item name="meleeWpnBladeT1HuntingKnife"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieWightT2" loot_quality_template="QLTemplateT2">
+			<item name="resourceAcid" count="1,2"/>
+			<item name="medicalBloodBag" count="1,2"/>
+			<item name="ammoArrowSteelAP" count="15,20"/>
+			<item name="ammoCrossbowBoltSteelAP" count="15,20"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieWightT3" loot_quality_template="QLTemplateT3">
+			<item name="resourceTestosteroneExtract"/>
+			<item name="resourceMilitaryFiber" count="10,15"/>
+			<item name="meleeWpnBladeT3Machete"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieWightTiered">
+			<item group="BW19Loot_zombieWightT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieWightT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieWightT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieWightT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieWightCommon" count="2">
+			<item name="resourceBrokenGlass" count="10,20"/>
+			<item name="resourceScrapIron" count="30,40"/>
+			<item name="resourceBone" count="3,5"/>
+			<item name="foodRottingFlesh" count="5,7"/>
+			<item name="resourceDuctTape" count="2,3"/>
+			<item name="resourceMetalPipe" count="10,15"/>
+			<item name="resourceLeather" count="5,10"/>
+			<item name="resourceAnimalFat" count="8,10"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieWight" count="all">
+			<item group="BW19Loot_zombieWightTiered"/>
+			<item group="BW19Loot_zombieWightCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="849" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieWight"/>
+		</lootcontainer>
+
+		<!-- zombieBoe loot -->
+		<lootgroup name="BW19Loot_zombieBoeT0" loot_quality_template="QLTemplateT0">
+			<item name="thrownAmmoMolotovCocktail" count="10,20"/> <!-- Considered T1 in other game loot -->
+			<item name="meleeWpnSledgeT0StoneSledgehammer"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBoeT1" loot_quality_template="QLTemplateT1">
+			<item name="thrownAmmoMolotovCocktail" count="10,20"/>
+			<item name="drugSkullCrushers" count="1,2" prob="0.5"/>
+			<item name="resourceForgedIron" count="10,20"/>
+			<item name="meleeWpnSledgeT1IronSledgehammer"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBoeT2" loot_quality_template="QLTemplateT2">
+			<item name="meleeWpnSledgeT1IronSledgehammerSchematic"/>
+			<item name="meleeWpnSledgeT3SteelSledgehammer"/> <!-- Considered T3 in other game loot, there is no T2 sledgehammer -->
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBoeT3" loot_quality_template="QLTemplateT3">
+			<item name="meleeWpnSledgeT3SteelSledgehammerSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBoeTiered">
+			<item group="BW19Loot_zombieBoeT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieBoeT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieBoeT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieBoeT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBoeCommon" count="1,2">
+			<item name="drinkCanMegaCrush" prob="0.06"/>
+			<item name="apparelShades"/>
+			<item name="drugPainkillers" count="1,2"/>
+			<item name="resourceTestosteroneExtract" prob=".25"/>
+			<item name="apparelCigar"/>
+			<item group="cannedfood" count="2,3"/>
+			<item name="drinkJarBoiledWater" count="1,3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBoe" count="all">
+			<item group="BW19Loot_zombieBoeTiered"/>
+			<item group="BW19Loot_zombieBoeCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="850" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieBoe"/>
+		</lootcontainer>
+
+		<!-- zombieFootballPlayer loot -->
+		<lootgroup name="BW19Loot_zombieFootballPlayerT0" loot_quality_template="QLTemplateT0">
+			<item name="armorFootballHelmet"/>
+			<item name="apparelBallCap"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieFootballPlayerT1" loot_quality_template="QLTemplateT1">
+			<item name="foodCanPasta" count="2,3"/>
+			<item name="foodCanSalmon" count="2,3"/>
+			<item name="foodCanChili" count="2,3"/>
+			<item name="drinkCanMegaCrush"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFootballPlayerT2" loot_quality_template="QLTemplateT2">
+			<item name="meleeWpnSpearT3SteelSpearParts" count="2,3"/> <!-- Considered T3 in other game loot -->
+			<item name="armorFootballHelmetZU"/> <!-- Not in any game loot! Unique to here. -->
+			<item name="medicalPlasterCastSchematic"/>
+			<item name="drinkYuccaJuiceSmoothie" count="2,3"/>
+			<item name="foodSpaghetti" count="2,3"/>
+			<item name="bookSpearHunter3SteelSpears"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFootballPlayerT3" loot_quality_template="QLTemplateT3">
+			<item name="meleeWpnSpearT3SteelSpear"/>
+			<item name="drugHealthBar" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFootballPlayerTiered">
+			<item group="BW19Loot_zombieFootballPlayerT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieFootballPlayerT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieFootballPlayerT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieFootballPlayerT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_SpearHunterBooks">
+			<item name="bookSpearHunter1Damage"/>
+			<item name="bookSpearHunter2Maintenance"/>
+			<item name="bookSpearHunter3SteelSpears"/>
+			<item name="bookSpearHunter4StrongArm"/>
+			<item name="bookSpearHunter5RapidStrike"/>
+			<item name="bookSpearHunter6PuncturedLung"/>
+			<item name="bookSpearHunter7QuickStrike"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFootballPlayerCommon" count="1,2">
+			<item name="resourceScrapIron" count="30,50"/>
+			<item name="resourceMetalPipe" count="10,15"/>
+			<item name="resourceDuctTape" count="2,3"/>
+			<item name="resourceRockSmall" count="30,50"/>
+			<item name="medicalPlasterCast" count="1,2"/>
+			<item group="BW19Loot_SpearHunterBooks" loot_prob_template="probTemplate0.5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFootballPlayer" count="all">
+			<item group="BW19Loot_zombieFootballPlayerTiered"/>
+			<item group="BW19Loot_zombieFootballPlayerCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="851" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieFootballPlayer"/>
+		</lootcontainer>
+
+		<!-- zombieFemaleFat loot -->
+		<lootgroup name="BW19Loot_zombieFemaleFatT0" loot_quality_template="QLTemplateT0">
+			<item name="meleeToolShovelT0StoneShovel"/>
+			<item name="meleeWpnClubT0WoodenClub"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieFemaleFatT1" loot_quality_template="QLTemplateT1">
+			<item name="meleeToolShovelT1IronShovel"/>
+			<item name="modMeleeGraveDigger"/>
+			<item name="modMeleeGraveDiggerSchematic"/>
+			<item name="plantedPumpkin1" count="1,2"/>
+			<item name="plantedPumpkin1Schematic"/>
+			<item name="drinkJarRedTeaSchematic"/>
+			<item name="meleeWpnClubT1BaseballBat"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFemaleFatT2" loot_quality_template="QLTemplateT2">
+			<item name="meleeToolShovelT2SteelShovel"/>
+			<item name="meleeWpnClubT1BaseballBatSchematic"/>
+			<item name="foodPumpkinCheesecake" count="2,3"/>
+			<item name="foodPumpkinCheesecakeSchematic"/>
+			<item name="foodShepardsPie" count="2,3"/>
+			<item name="foodShepardsPieSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFemaleFatT3" loot_quality_template="QLTemplateT3">
+			<item name="oldCash" count="800,1000"/>
+			<item name="meleeWpnClubT3SteelClub"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFemaleFatTiered">
+			<item group="BW19Loot_zombieFemaleFatT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieFemaleFatT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieFemaleFatT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieFemaleFatT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_BatterUpBooks">
+			<item name="bookBatterUpBaseballBats"/>
+			<item name="bookBatterUpBigHits"/>
+			<item name="bookBatterUpGear"/>
+			<item name="bookBatterUpKnockdown"/>
+			<item name="bookBatterUpSlowPitch"/>
+			<item name="bookBatterUpMaintenance"/>
+			<item name="bookBatterUpMetalChain"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFemaleFatCommon" count="1,2">
+			<item name="drinkJarRedTea" count="2,3"/>
+			<item name="foodCanBeef" count="2,3"/>
+			<item name="foodCanPasta" count="2,3"/>
+			<item group="BW19Loot_BatterUpBooks" loot_prob_template="probTemplate0.5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFemaleFat" count="all">
+			<item group="BW19Loot_zombieFemaleFatTiered"/>
+			<item group="BW19Loot_zombieFemaleFatCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="852" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieFemaleFat"/>
+		</lootcontainer>
+
+		<!-- zombieJoe loot -->
+		<lootgroup name="BW19Loot_zombieJoeT0" loot_quality_template="QLTemplateT0">
+			<item name="apparelSkullCap"/>
+			<item name="apparelHoodySweatshirt"/>
+			<item name="meleeToolRepairT1ClawHammer"/> <!-- Considered T1 in other game loot -->
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieJoeT1" loot_quality_template="QLTemplateT1">
+			<item name="resourceTrophy1" count="2,3"/>
+			<item name="resourceTrophy2" count="2,3"/>
+			<item name="resourceDoorKnob" count="2,3"/>
+			<item name="resourceDuctTape" count="5,7"/>
+			<item name="oldCash" count="200,300"/>
+			<item name="ammo762mmBulletBall" count="25,35"/>
+		</lootgroup>
+		
+		<!-- Suggest putting machete in T3 and switching the AK-47 for a Tactical AR and putting it in T2 -->
+		<lootgroup name="BW19Loot_zombieJoeT2" loot_quality_template="QLTemplateT2">
+			<item name="armorMilitaryStealthBoots"/> <!-- Not in any game loot. Only available as perk. Unique! -->
+			<item name="meleeWpnBladeT3Machete"/> <!-- Considered T3 in other game loot -->
+			<item name="meleeWpnBladeT3MacheteSchematic"/>
+			<item name="meleeToolRepairT1ClawHammer"/> <!-- Considered T1 in other game loot -->
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieJoeT3" loot_quality_template="QLTemplateT3">
+			<item name="drugSugarButts" count="1,2"/>
+			<item name="gunMGT1AK47"/> <!-- Considered T1 in other game loot. Tactical AR is T2, M60 is T3 of machine gun class -->
+			<item name="gunMGT1AK47Schematic"/>
+			<item name="ammo762mmBulletAP" count="45,65"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieJoeTiered">
+			<item group="BW19Loot_zombieJoeT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieJoeT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieJoeT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieJoeT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_GreatHeistBooks">
+			<item name="bookGreatHeistAdrenalineFall"/>
+			<item name="bookGreatHeistTimedCharge"/>
+			<item name="bookGreatHeistClaimed"/>
+			<item name="bookGreatHeistGems"/>
+			<item name="bookGreatHeistMotionDetection"/>
+			<item name="bookGreatHeistSafes"/>
+			<item name="bookGreatHeistSprintSneak"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieJoeCommon" count="1,2">
+			<item name="vehicleBicycleChassis" prob="0.1"/>
+			<item name="vehicleBicycleHandlebars" prob="0.1"/>
+			<item name="drugSteroids"/>
+			<item group="groupTreasureMaps"/>
+			<item name="resourceBrokenGlass" count="10,20"/>
+			<item name="resourceScrapBrass" count="100,200"/>
+			<item name="vehicleBicycleChassisSchematic"/>
+			<item name="vehicleBicycleHandlebarsSchematic"/>
+			<item group="BW19Loot_GreatHeistBooks" loot_prob_template="probTemplate0.5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieJoe" count="all">
+			<item group="BW19Loot_zombieJoeTiered"/>
+			<item group="BW19Loot_zombieJoeCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="853" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieJoe"/>
+		</lootcontainer>
+
+		<!-- zombieMoe loot -->
+		<lootgroup name="BW19Loot_zombieMoeT0" loot_quality_template="QLTemplateT0">
+			<item name="forgeSchematic"/>
+			<item group="groupTreasureMaps"/>
+			<item name="drugPainkillers" count="1,2"/>
+			<item name="resourceLockPick" count="5,10"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieMoeT1" loot_quality_template="QLTemplateT1">
+			<item name="gunMGT1AK47Schematic"/>
+			<item name="armorIronSetSchematic"/>
+			<item name="apparelCigar"/>
+			<item name="drinkJarBeer" count="1,2"/>
+			<item name="toolBellowsSchematic"/>
+			<item name="toolAnvilSchematic"/>
+			<item name="gunMGT1AK47Parts" count="2,3"/> <!-- despite the name pretty sure this is generic machine gun parts -->
+			<item name="gunRifleT1HuntingRifleParts" count="2,3"/> <!-- ditto 'cept rifles -->
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMoeT2" loot_quality_template="QLTemplateT2">
+			<item name="gunMGT2TacticalARSchematic"/>
+			<item name="armorSteelSetSchematic"/>
+			<item name="modArmorPlatingReinforcedSchematic"/>
+			<item name="foodGumboStew" count="2,3"/>
+			<item name="drugFortBites" count="1,2"/>
+			<item name="toolForgeCrucibleSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMoeT3" loot_quality_template="QLTemplateT3">
+			<item name="drugSugarButts" count="1,2"/>
+			<item name="gunMGT2TacticalAR"/> <!-- Considered T2 in other game loot -->
+			<item name="gunMGT3M60"/>
+			<item name="ammo762mmBulletAP" count="20,30"/>
+			<item name="ammo762mmBulletHP" count="20,30"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMoeTiered">
+			<item group="BW19Loot_zombieMoeT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieMoeT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieMoeT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieMoeT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_WasteTreasuresBooks">
+			<item name="bookWasteTreasuresAcid"/>
+			<item name="bookWasteTreasuresCloth"/>
+			<item name="bookWasteTreasuresCoffins"/>
+			<item name="bookWasteTreasuresDoors"/>
+			<item name="bookWasteTreasuresHoney"/>
+			<item name="bookWasteTreasuresSinks"/>
+			<item name="bookWasteTreasuresWater"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMoeCommon" count="1,2">
+			<item name="foodCanCatfood" count="2,3"/>
+			<item name="resourceWood" count="100,150"/>
+			<item name="resourceScrapIron" count="100,200"/>
+			<item name="resourceClayLump" count="100,200"/>
+			<item name="resourceScrapBrass" count="100,200"/>
+			<item name="resourceScrapLead" count="100,200"/>
+			<item name="resourceRockSmall" count="100,200"/>
+			<item name="resourceCrushedSand" count="100,200"/>
+			<item name="resourceLockPick" count="5,10"/>
+			<item group="BW19Loot_WasteTreasuresBooks" loot_prob_template="probTemplate0.5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMoe" count="all">
+			<item group="BW19Loot_zombieMoeTiered"/>
+			<item group="BW19Loot_zombieMoeCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="854" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieMoe"/>
+		</lootcontainer>
+
+		<!-- zombieArlene loot -->
+		<lootgroup name="BW19Loot_zombieArleneT0" loot_quality_template="QLTemplateT0">
+			<item name="apparelSkirt"/>
+			<item name="foodGrilledMeat" count="1,2"/>
+			<item name="meleeWpnBladeT1HuntingKnife"/> <!-- Considered T1 in other game loot -->
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieArleneT1" loot_quality_template="QLTemplateT1">
+			<item name="foodBlueberryPie" count="1,2"/>
+			<item name="foodChiliDog" count="1,2"/>
+			<item name="gunHandgunT1Pistol" prob="0.2"/>
+			<item name="meleeWpnBladeT1HuntingKnife"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieArleneT2" loot_quality_template="QLTemplateT2">
+			<item name="ammo9mmBulletHP" count="10,20"/>
+			<item name="foodPumpkinPie" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieArleneT3" loot_quality_template="QLTemplateT3">
+			<item name="ammo9mmBulletAP" count="20,30"/>
+			<item name="foodPumpkinCheesecake" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieArleneTiered">
+			<item group="BW19Loot_zombieArleneT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieArleneT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieArleneT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieArleneT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieArleneCommon" count="1,2">
+			<item name="resourceCloth" count="5,10"/>
+			<item name="resourceCropGoldenrodPlant" count="10,15"/>
+			<item name="resourceCropChrysanthemumPlant" count="10,15"/>
+			<item name="ammo9mmBulletBall" count="25,50"/>
+			<item name="resourceGunPowder" count="100,200"/>
+			<item name="resourceBulletCasing" count="25,50"/>
+			<item name="resourceBulletTip" count="25,50"/>
+			<item name="foodShamSandwich" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieArlene" count="all">
+			<item group="BW19Loot_zombieArleneTiered"/>
+			<item group="BW19Loot_zombieArleneCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="855" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieArlene"/>
+		</lootcontainer>
+
+		<!-- zombieLab loot -->
+		<lootgroup name="BW19Loot_MagnumEnforcerBooks">
+			<item name="bookEnforcerAPAmmo"/>
+			<item name="bookEnforcerApparel"/>
+			<item name="bookEnforcerCriminalPursuit"/>
+			<item name="bookEnforcerHPAmmo"/>
+			<item name="bookEnforcerDamage"/>
+			<item name="bookEnforcerIntimidation"/>
+			<item name="bookEnforcerPunks"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieLabT0" loot_quality_template="QLTemplateT0">
+			<item name="medicalAloeCream" count="10,15"/>
+			<item name="toolCookingPot" count="2,3"/>
+			<item name="toolCookingGrill" count="2,3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieLabT1" loot_quality_template="QLTemplateT1" count="2">
+			<item group="BW19Loot_MagnumEnforcerBooks"/>
+			<item name="medicalFirstAidKit"/>
+			<item name="medicalBloodBag" count="2,3"/>
+			<item name="drugAntibiotics" count="1,2"/>
+			<item name="meleeWpnBladeT1HuntingKnifeSchematic"/>
+			<item name="toolBeaker"/>
+			<item name="resourceAcid" count="1,2"/>
+			<item name="resourceGlue" count="3,5"/>
+			<item name="ammo44MagnumBulletBall" count="15,20"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieLabT2" loot_quality_template="QLTemplateT2" count="2">
+			<item name="plantedGraceCorn1Schematic"/> <!-- super corn? -->
+			<item name="drugRecog" count="2"/>
+			<item name="gunHandgunT2Magnum44Schematic"/>
+			<item name="foodShamChowderSchematic"/>
+			<item name="chemistryStationSchematic"/>
+			<item name="meleeWpnBladeT1HuntingKnifeSchematic"/>
+			<item name="gunHandgunT2Magnum44"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieLabT3" loot_quality_template="QLTemplateT3">
+			<item name="generatorbankSchematic"/>
+			<item group="BW19Loot_MagnumEnforcerBooks" prob="0.5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieLabTiered">
+			<item group="BW19Loot_zombieLabT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieLabT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieLabT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieLabT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieLabCommon" count="1,2">
+			<item group="groupTreasureMaps" prob="0.1"/>
+			<item name="foodCanMiso" count="2,3"/>
+			<item name="drinkJarRedTea" count="2,3"/>
+			<item name="medicalFirstAidBandage" count="1,2"/>
+			<item name="resourceOilShale" count="200,300"/>
+			<item name="resourceBone" count="5,10"/>
+			<item name="resourcePaper" count="20,30"/>
+			<item name="foodCanSham" count="4,5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieLab" count="all">
+			<item group="BW19Loot_zombieLabTiered"/>
+			<item group="BW19Loot_zombieLabCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="856" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieLab"/>
+		</lootcontainer>
+
+		<!-- Boss/Legendary List -->
+		<lootgroup name="BW19Loot_zombieLabLegendary" count="all">
+			<item group="BW19Loot_zombieLabTiered"/>
+			<item group="BW19Loot_zombieLabCommon"/>
+			<item name="gunHandgunT2Magnum44" mods="modGunMuzzleBrake,modGunFlashlight,modGunReflexSight,modGunCrippleEm" mod_chance="1" quality="6"/>
+			<item name="ammo44MagnumBulletAP" count="100"/>
+		</lootgroup>
+		
+		<lootcontainer id="956" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieLabLegendary"/>
+		</lootcontainer>
+
+		<!-- zombieScreamer loot -->
+		<!-- Considering how easy she is to farm, might be the most OP list on the set! -->
+		<lootgroup name="BW19Loot_zombieScreamerT0" loot_quality_template="QLTemplateT0">
+			<item name="ammoArrowIron" count="20,30"/>
+			<item name="ammoBlunderbuss" count="10,15"/>
+			<item name="ammoCrossbowBoltIron" count="15,20"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieScreamerT1" loot_quality_template="QLTemplateT1" count="1,2">
+			<item name="ammoRocketHE" count="2,4"/>
+			<item name="ammoRocketFrag" count="1,2"/>
+			<item name="ammoArrowExploding" count="5,10"/>
+			<item name="ammoCrossbowBoltExploding" count="5,10"/>
+			<item name="ammoBundleJunkTurretShell" count="75,100"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieScreamerT2" loot_quality_template="QLTemplateT2" count="1,2">
+			<item name="meleeToolAxeT3ChainsawParts" count="2,3"/>
+			<item name="ammo9mmBulletHP" count="15,20"/>
+			<item name="ammo44MagnumBulletHP" count="8,10"/>
+			<item name="ammo762mmBulletHP" count="15,20"/>
+			<item name="ammoShotgunSlug" count="5,10"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieScreamerT3" loot_quality_template="QLTemplateT3" count="1,2">
+			<item name="ammoBundleJunkTurretAP" count="100,150"/>
+			<item name="ammo9mmBulletAP" count="15,20"/>
+			<item name="ammo44MagnumBulletAP" count="8,10"/>
+			<item name="ammo762mmBulletAP" count="15,20"/>
+			<item name="ammoShotgunBreachingSlug" count="5,10"/>
+			<item name="meleeToolPickT3Auger"/>
+		</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieScreamerTiered">
+			<item group="BW19Loot_zombieScreamerT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieScreamerT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieScreamerT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieScreamerT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieScreamerCommon" count="2">
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item name="ammo44MagnumBulletBall" count="15,20"/>
+			<item name="ammo762mmBulletBall" count="20,25"/>
+			<item name="ammoShotgunShell" count="10,15"/>
+			<item name="ammoJunkTurretRegular" count="100,150"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieScreamer" count="all">
+			<item group="BW19Loot_zombieScreamerTiered"/>
+			<item group="BW19Loot_zombieScreamerCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="857" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieScreamer"/>
+		</lootcontainer>
+
+		<!-- zombieDarlene loot -->
+		<lootgroup name="BW19Loot_zombieDarleneT0" loot_quality_template="QLTemplateT0">
+			<item name="meleeToolPaintTool"/>
+			<item name="meleeToolRepairT0StoneAxe"/>
+			<item group="groupQuestChallenge"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieDarleneT1" loot_quality_template="QLTemplateT1">
+			<item name="gunHandgunT1Pistol"/>
+			<item name="plantedPumpkin1" count="1,2"/>
+			<item name="plantedPotato1" count="1,2"/>
+			<item name="foodMeatStew" count="1,2"/>
+			<item name="vehicleMinibikeChassisSchematic"/>
+			<item name="vehicleMinibikeHandlebarsSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieDarleneT2" loot_quality_template="QLTemplateT2">
+			<item name="plantedPumpkin1Schematic"/>
+			<item name="plantedPotato1Schematic"/>
+			<item name="foodMeatStewSchematic"/>
+			<item name="modArmorImprovedFittingsSchematic"/>
+			<item name="modArmorImprovedFittings"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieDarleneT3" loot_quality_template="QLTemplateT3">
+			<item name="meleeToolRepairT3Nailgun"/>
+			<item name="meleeToolRepairT3NailgunSchematic"/> 
+			<item name="motionsensorSchematic"/>
+			<item name="motionsensor" count="4"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieDarleneTiered">
+			<item group="BW19Loot_zombieDarleneT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieDarleneT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieDarleneT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieDarleneT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_NeedleAndThreadBooks">
+			<item name="bookNeedleAndThreadDesertWear"/>
+			<item name="bookNeedleAndThreadDusters"/>
+			<item name="bookNeedleAndThreadFootwear"/>
+			<item name="bookNeedleAndThreadLegwear"/>
+			<item name="bookNeedleAndThreadPockets"/>
+			<item name="bookNeedleAndThreadPufferCoats"/>
+			<item name="bookNeedleAndThreadWinterWear"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieDarleneCommon" count="2">
+			<item name="resourceDuctTape" count="2,3"/>
+			<item name="resourceCandyTin" count="5"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item group="BW19Loot_NeedleAndThreadBooks"/>
+			<item name="resourcePaint" count="50,100"/>
+			<item name="foodCanTuna" count="2,3"/>
+			<item name="resourceSewingKit" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieDarlene" count="all">
+			<item group="BW19Loot_zombieDarleneTiered"/>
+			<item group="BW19Loot_zombieDarleneCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="858" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieDarlene"/>
+		</lootcontainer>
+
+		<!-- zombieMarlene loot -->
+		<lootgroup name="BW19Loot_RangersBooks">
+			<item name="bookRangersArrowRecovery"/>
+			<item name="bookRangersCripplingShot"/>
+			<item name="bookRangersKnockdown"/>
+			<item name="bookRangersFlamingArrows"/>
+			<item name="bookRangersAPAmmo"/>
+			<item name="bookRangersExplodingBolts"/>
+			<item name="bookRangersForestGuide"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMarleneT0" loot_quality_template="QLTemplateT0">
+			<item group="BW19Loot_RangersBooks" prob="0.8"/>
+			<item name="gunBowT1WoodenBow"/> <!-- Considered T1 in other game loot -->
+			<item name="gunBowT0PrimitiveBow"/>
+			<item name="meleeToolSalvageT1Wrench"/> <!-- Considered T1 in other game loot -->
+			<item name="resourceRepairKit" count="2,3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieMarleneT1" loot_quality_template="QLTemplateT1">
+			<item name="drinkJarYuccaJuice" count="2,3"/>
+			<item name="vehicleWheels" count="1,2"/>
+			<item name="meleeToolSalvageT1WrenchSchematic"/>
+			<item name="gunBowT1WoodenBowSchematic"/>
+			<item name="workbenchSchematic"/>
+			<item name="ammoArrowIron" count="10,25"/>
+			<item name="meleeToolSalvageT1Wrench"/>
+			<item name="resourceAcid" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMarleneT2" loot_quality_template="QLTemplateT2">
+			<item name="foodTunaFishGravyToast" count="2,3"/>
+			<item name="meleeToolSalvageT2RatchetSchematic"/>
+			<item name="gunBowT3CompoundBowSchematic"/> <!-- Considered T3 in other game loot -->
+			<item name="ammoArrowSteelAP" count="20,30"/>
+			<item name="meleeToolSalvageT2Ratchet"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMarleneT3" loot_quality_template="QLTemplateT3">
+			<item name="drugHackers" count="1,2"/>
+			<item name="meleeToolSalvageT3ImpactDriverSchematic"/>
+			<item name="meleeToolSalvageT3ImpactDriver"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMarleneTiered">
+			<item group="BW19Loot_zombieMarleneT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieMarleneT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieMarleneT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieMarleneT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieMarleneCommon" count="1,2">
+			<item name="foodCanPears" count="2,3"/>
+			<item name="meleeToolAxeT3ChainsawParts" count="1,2"/>
+			<item name="resourceOilShale" count="200,300"/>
+			<item name="resourceOil" count="2,5"/>
+			<item name="resourceMechanicalParts" count="1,2"/>
+			<item name="resourceSpring"/>
+			<item name="resourceHeadlight" count="1,2"/>
+			<item group="BW19Loot_RangersBooks" loot_prob_template="probTemplate0.5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMarlene" count="all">
+			<item group="BW19Loot_zombieMarleneTiered"/>
+			<item group="BW19Loot_zombieMarleneCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="859" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieMarlene"/>
+		</lootcontainer>
+
+		<!-- zombieYo loot -->
+		<lootgroup name="BW19Loot_zombieYoT0" loot_quality_template="QLTemplateT0" count="3">
+			<item name="drinkCanEmpty" count="5,10"/>
+			<item name="foodCanLamb" count="2,3"/>
+			<item name="foodMoldyBread" count="1,2"/>
+			<item name="foodShamSandwich" count="1,2"/>
+			<item name="foodCropMushrooms" count="4,5"/>
+			<item name="foodCropCorn" count="5,10"/>
+			<item name="foodCropPotato" count="2,3"/>
+			<item name="foodEgg" count="10,20"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieYoT1" loot_quality_template="QLTemplateT1" count="2">
+			<item name="modGunBarrelExtender"/>
+			<item name="modGunDrumMagazineExtender" prob="0.1"/>
+			<item name="modArmorHelmetLight"/>
+			<item name="modGunCrippleEm"/>
+			<item name="modGunBowPolymerString"/>
+			<item name="foodPumpkinBread" count="2,3"/>
+			<item name="gunHandgunT1Pistol"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item name="drinkJarRedTea" count="2,3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieYoT2Actual" loot_quality_template="QLTemplateT2">
+			<item name="foodChiliDog" count="2,3"/>
+			<item name="drinkCanMegaCrush"/>
+			<item name="modArmorHelmetLightSchematic"/>
+			<item name="modGunScopeLargeSchematic"/>
+			<item name="modGunTriggerGroupAutomaticSchematic"/>
+			<item name="modMeleeBunkerBusterSchematic"/>
+			<item name="modMeleeIronBreakerSchematic"/>
+			<item name="modGunBarrelExtenderSchematic"/>
+			<item name="modGunSoundSuppressorSilencerSchematic"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieYoT2" loot_quality_template="QLTemplateT2" count="all">
+			<item name="ammo9mmBulletHP" count="20,30"/>
+			<item group="BW19Loot_zombieYoT2Actual"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieYoT3" loot_quality_template="QLTemplateT3">
+			<item name="foodHoboStew" count="2,3"/>
+			<item name="drinkJarGrandpasMoonshine"/>
+			<item name="ammo9mmBulletAP" count="20,30"/>
+			<item name="meleeToolSalvageT2RatchetSchematic"/> <!-- a T2 item -->
+			<item name="meleeToolSalvageT3ImpactDriverSchematic"/>
+			<item name="meleeToolPickT3AugerSchematic"/>
+			<item name="meleeToolAxeT3ChainsawSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieYoTiered">
+			<item group="BW19Loot_zombieYoT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieYoT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieYoT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieYoT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieYoCommon" count="2">
+			<item name="foodCropBlueberries" count="2,3"/>
+			<item name="foodCropMushrooms" count="4,5"/>
+			<item name="foodCropCorn" count="5,10"/>
+			<item name="foodCropPotato" count="2,3"/>
+			<item name="foodEgg" count="10,20"/>
+			<item name="foodCornMeal" count="2,5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieYo" count="all">
+			<item group="BW19Loot_zombieYoTiered"/>
+			<item group="BW19Loot_zombieYoCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="860" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieYo"/>
+		</lootcontainer>
+
+		<!-- zombieSteve loot -->
+		<lootgroup name="BW19Loot_zombieSteveT0" loot_quality_template="QLTemplateT0">
+			<item name="meleeToolRepairT0StoneAxe"/>
+			<item name="meleeWpnKnucklesT0LeatherKnuckles"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSteveT1" loot_quality_template="QLTemplateT1">
+			<item name="meleeToolAxeT1IronFireaxe"/>
+			<item name="resourceSilverNugget" count="2,3"/>
+			<item name="meleeWpnKnucklesT1IronKnuckles"/>
+			<item name="meleeWpnKnucklesT1IronKnucklesSchematic"/>
+			<item name="modMeleeClubBarbedWire"/>
+			<item name="modMeleeWeightedHead"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSteveT2" loot_quality_template="QLTemplateT2" count="1,2">
+			<item name="meleeWpnBatonT2StunBaton"/>
+			<item name="meleeToolAxeT2SteelAxe"/>
+			<item name="resourceGoldNugget" count="2,3"/>
+			<item name="meleeWpnKnucklesT3SteelKnucklesParts" count="3,5"/>
+			<item name="meleeWpnBatonT2StunBatonSchematic"/>
+			<item name="modMeleeClubMetalSpikes"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSteveT3" loot_quality_template="QLTemplateT3" count="1,2">
+			<item name="meleeWpnKnucklesT3SteelKnuckles"/>
+			<item name="meleeWpnKnucklesT3SteelKnucklesSchematic"/>
+			<item name="resourceRawDiamond" count="2,3"/>
+			<item name="meleeToolAxeT3Chainsaw"/>
+			<item name="meleeToolAxeT3ChainsawSchematic"/>
+			<item name="drugSkullCrushers" count="1,2"/>
+			<item name="electricfencepostSchematic"/>
+		</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieSteveTiered">
+			<item group="BW19Loot_zombieSteveT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieSteveT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieSteveT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieSteveT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_LuckyLooterBooks">
+			<item name="bookLuckyLooterAmmunition"/>
+			<item name="bookLuckyLooterBooks"/>
+			<item name="bookLuckyLooterBrass"/>
+			<item name="bookLuckyLooterDukes"/>
+			<item name="bookLuckyLooterFood"/>
+			<item name="bookLuckyLooterLead"/>
+			<item name="bookLuckyLooterMedical"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSteveCommon" count="2">
+			<item name="resourceSewingKit" count="2,3"/>
+			<item name="oldCash" count="200,300"/>
+			<item name="carBattery"/>
+			<item group="cannedfood" count="2,3"/>
+			<item group="BW19Loot_LuckyLooterBooks"/>
+			<item name="meleeToolWireTool"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSteve" count="all">
+			<item group="BW19Loot_zombieSteveTiered"/>
+			<item group="BW19Loot_zombieSteveCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="861" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieSteve"/>
+		</lootcontainer>
+
+		<!-- zombieSteveCrawler loot -->
+		<lootgroup name="BW19Loot_zombieSteveCrawlerT0" loot_quality_template="QLTemplateT0">
+			<item name="meleeWpnSpearT0StoneSpear"/>
+			<item name="foodBakedPotatoSchematic"/>
+			<item name="medicalSplint" count="1,2"/>
+			<item name="plantedPumpkin1"/>
+			<item name="plantedPotato1"/>
+			<item name="plantedMushroom1"/>
+			<item name="plantedCoffee1"/>
+			<item name="plantedCorn1"/>
+			<item group="groupTreasureMaps"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSteveCrawlerT1" loot_quality_template="QLTemplateT1" count="1,2">
+			<item name="drinkJarPureMineralWater" count="1,2"/>
+			<item name="foodBoiledMeat" count="1,2"/>
+			<item name="plantedHop1"/>
+			<item name="meleeWpnSpearT1IronSpear"/>
+			<item name="meleeWpnSpearT1IronSpearSchematic"/>
+			<item name="medicalPlasterCastSchematic"/>
+			<item name="bookNeedleAndThreadPockets"/> <!-- there is no schematic just for the cargo pockets -->
+			<item name="foodPumpkinCheesecakeSchematic"/>
+			<item name="modArmorCoolingMeshSchematic"/>
+			<item name="armorIronSetSchematic"/>
+			<item name="ammo762mmBulletBall" count="20,25"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSteveCrawlerT2" loot_quality_template="QLTemplateT2">
+			<item name="drinkJarYuccaJuice" count="2,3"/>
+			<item name="foodPumpkinCheesecake" count="1,2"/>
+			<item name="foodPumpkinPieSchematic"/>
+			<item name="meleeWpnSpearT3SteelSpear"/>
+			<item name="meleeWpnSpearT3SteelSpearParts" count="2,3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSteveCrawlerT3" loot_quality_template="QLTemplateT3">
+			<item name="drinkJarGrandpasAwesomeSauce"/>
+			<item name="foodPumpkinPie" count="2,3"/>
+			<item name="ammo762mmBulletBall" count="25,30"/>
+		</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieSteveCrawlerTiered">
+			<item group="BW19Loot_zombieSteveCrawlerT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieSteveCrawlerT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieSteveCrawlerT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieSteveCrawlerT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<!-- Book group defined in section for zombieMoe -->
+		
+		<lootgroup name="BW19Loot_zombieSteveCrawlerCommon" count="2">
+			<item name="drinkJarEmpty" count="5,10"/>
+			<item name="foodCanPeas" count="2,3"/>
+			<item name="medicalFirstAidBandage" count="1,2"/>
+			<item group="BW19Loot_WasteTreasuresBooks" prob="0.1"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSteveCrawler" count="all">
+			<item group="BW19Loot_zombieSteveCrawlerTiered"/>
+			<item group="BW19Loot_zombieSteveCrawlerCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="862" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieSteveCrawler"/>
+		</lootcontainer>
+
+		<!-- zombieBusinessMan loot -->
+		<lootgroup name="BW19Loot_zombieBusinessManT0" loot_quality_template="QLTemplateT0">
+			<item group="groupTreasureMaps" prob="0.25"/> <!-- guaranteed drop without a prob -->
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBusinessManT1" loot_quality_template="QLTemplateT1">
+			<item name="gunHandgunT1Pistol"/>
+			<item name="gunMGT1AK47"/>
+			<item name="ammo762mmBulletBall" count="15,25"/>
+			<item name="foodSteakAndPotato" count="2,3"/>
+			<item name="foodCanDogfood"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBusinessManT2" loot_quality_template="QLTemplateT2">
+			<item name="modGunMagazineExtenderSchematic"/>
+			<item name="modGunMagazineExtender"/>
+			<item name="modGunSoundSuppressorSilencerSchematic"/>
+			<item name="modGunSoundSuppressorSilencer"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBusinessManT3" loot_quality_template="QLTemplateT3">
+			<item name="vehicle4x4TruckChassisSchematic"/>
+			<item name="vehicle4x4TruckChassisSchematic"/>
+			<item name="drugCovertCats" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_NightStalkerBooks">
+			<item name="bookNightStalkerArchery"/>
+			<item name="bookNightStalkerBlades"/>
+			<item name="bookNightStalkerSilentNight"/>
+			<item name="bookNightStalkerSlumberParty"/>
+			<item name="bookNightStalkerStealthDamage"/>
+			<item name="bookNightStalkerThiefAdrenaline"/>
+			<item name="bookNightStalkerTwilightThief"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBusinessManTiered">
+			<item group="BW19Loot_zombieBusinessManT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieBusinessManT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieBusinessManT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieBusinessManT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBusinessManCommon" count="2">
+			<item name="oldCash" count="50,100"/>
+			<item name="resourceOil" count="2,5"/>
+			<item name="casinoCoin" count="100,200"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item name="drinkJarCoffee" count="2,3"/>
+			<item group="BW19Loot_NightStalkerBooks"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBusinessMan" count="all">
+			<item group="BW19Loot_zombieBusinessManTiered"/>
+			<item group="BW19Loot_zombieBusinessManCommon"/>
+		</lootgroup>
+
+		<lootcontainer id="863" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieBusinessMan"/>
+		</lootcontainer>
+
+		<!-- Boss/Legendary List -->
+		<lootgroup name="BW19Loot_zombieBusinessManLegendary" count="all">
+			<item group="BW19Loot_zombieBusinessManTiered"/>
+			<item group="BW19Loot_zombieBusinessManCommon"/>
+			<item name="oldCash" count="50000,100000"/>
+			<item name="gunHandgunT3DesertVulture" mods="modGunMagazineExtender,modGunFlashlight,modGunReflexSight,modGunCrippleEm" mod_chance="1" quality="6"/>
+		</lootgroup>
+		
+		<lootcontainer id="963" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieBusinessManLegendary"/>
+		</lootcontainer>
+
+		<!-- zombieSnow loot -->
+		<lootgroup name="BW19Loot_zombieSnowT0" loot_quality_template="QLTemplateT0">
+			<item name="meleeToolRepairT0StoneAxe"/>
+			<item name="resourceFeather" count="20,30"/>
+			<item name="foodVegetableStew" count="2,3"/>
+			<item name="gunRifleT1HuntingRifle"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSnowT1" loot_quality_template="QLTemplateT1" count="2">
+			<item group="groupArmorT1_Heavy"/>
+			<item name="drinkJarBeer" count="1,2"/>
+			<item name="foodVegetableStewSchematic"/>
+			<item name="meleeToolAxeT1IronFireaxe"/>
+			<item name="ammo762mmBulletBall" count="20,30"/>
+			<item name="gunRifleT1HuntingRifle"/>
+			<item name="modMeleeWoodSplitter"/>
+			<item name="modArmorInsulatedLiner"/>
+			<item name="medicalFirstAidKitSchematic"/>
+			<item name="modMeleeWoodSplitterSchematic"/>
+			<item name="modArmorInsulatedLinerSchematic"/>
+			<item name="modGunScopeSmall"/>
+		</lootgroup>
+				
+		<lootgroup name="BW19Loot_zombieSnowT2" loot_quality_template="QLTemplateT2">
+			<item group="groupArmorT2_Heavy"/>
+			<item name="foodSteakAndPotato" count="2,3"/>
+			<item name="drinkYuccaJuiceSmoothie" count="2,3"/>
+			<item name="meleeToolAxeT2SteelAxe"/>
+			<item name="gunRifleT2MarksmanRifle"/>
+			<item name="modGunMuzzleBrake"/>
+			<item name="modGunCrippleEm"/>
+			<item name="medicalFirstAidKit" count="2,3"/>
+			<item name="ammo762mmBulletHP" count="20,30"/>
+			<item name="modGunScopeMedium"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSnowT3" loot_quality_template="QLTemplateT3">
+			<item group="groupArmorT3_Heavy"/>
+			<item name="gunRifleT3SniperRifle"/>
+			<item name="foodGumboStew" count="2,3"/>
+			<item name="drinkYuccaJuiceSmoothie" count="2,3"/>
+			<item name="meleeToolAxeT3Chainsaw"/>
+			<item name="ammo762mmBulletAP" count="20,30"/>
+			<item name="modGunScopeLarge"/>
+		</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieSnowTiered">
+			<item group="BW19Loot_zombieSnowT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieSnowT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieSnowT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieSnowT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_SniperBooks">
+			<item name="bookSniperAPAmmo"/>
+			<item name="bookSniperControlledBreathing"/>
+			<item name="bookSniperCripplingShot"/>
+			<item name="bookSniperDamage"/>
+			<item name="bookSniperHeadShot"/>
+			<item name="bookSniperReload"/>
+			<item name="bookSniperHPAmmo"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSnowCommon" count="2">
+			<item name="drinkJarBoiledWater" count="2,3"/>
+			<item name="foodCanBeef" count="2,3"/>
+			<item name="drugPainkillers" count="3,5"/>
+			<item name="forgeSchematic" prob=".3"/>
+			<item name="medicalSplint" count="2,3"/>
+			<item name="resourceRepairKit" count="2,3"/>
+			<item group="BW19Loot_SniperBooks" prob=".15"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSnow" count="all">
+			<item group="BW19Loot_zombieSnowTiered"/>
+			<item group="BW19Loot_zombieSnowCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="864" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieSnow"/>
+		</lootcontainer>
+
+		<!-- zombieSpider loot -->
+		<lootgroup name="BW19Loot_zombieSpiderT0" loot_quality_template="QLTemplateT0">
+			<item group="groupToolsT0"/>
+			<item group="seeds" count="1,2"/>
+			<item group="groupArmorT1_Light"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSpiderT1" loot_quality_template="QLTemplateT1" count="2">
+			<item name="gunHandgunT1PistolParts" count="5,10"/>
+			<item name="drinkJarCoffee" count="2,3"/>
+			<item name="foodBaconAndEggs" count="2,3"/>
+			<item name="foodBaconAndEggsSchematic"/>
+			<item group="groupToolsT1"/>
+			<item group="groupArmorT2_Light"/>
+			<item name="modArmorImpactBracing"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSpiderT2" loot_quality_template="QLTemplateT2" count="2">
+			<item group="groupToolsT2"/>
+			<item name="gunHandgunT3SMG5"/> <!-- T3 -->
+			<item name="gunHandgunT3SMG5Schematic"/>
+			<item name="modArmorImpactBracingSchematic"/>
+			<item name="foodBlueberryPie" count="2,3"/>
+			<item name="drinkJarBlackStrapCoffee" count="2,3"/>
+			<item name="medicalBloodBag" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSpiderT3" loot_quality_template="QLTemplateT3">
+			<item group="modArmorT3"/>
+			<item name="meleeWpnSledgeT3SteelSledgehammer"/>
+			<item name="foodShepardsPie" count="2,3"/>
+			<item name="drinkYuccaJuiceSmoothie" count="2,3"/>
+			<item name="ammo9mmBulletAP" count="40,50"/>
+		</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieSpiderTiered">
+			<item group="BW19Loot_zombieSpiderT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieSpiderT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieSpiderT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieSpiderT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_PistolPeteBooks">
+			<item name="bookPistolPeteAPAmmo"/>
+			<item name="bookPistolPeteDamage"/>
+			<item name="bookPistolPeteHPAmmo"/>
+			<item name="bookPistolPeteMaintenance"/>
+			<item name="bookPistolPeteSteadyHand"/>
+			<item name="bookPistolPeteSwissKnees"/>
+			<item name="bookPistolPeteTakeAim"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSpiderCommon" count="2">
+			<item name="drinkJarRiverWater" count="2,3"/>
+			<item name="foodCanSalmon" count="2,3"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item name="medicalAloeCream" count="5,10"/>
+			<item group="BW19Loot_PistolPeteBooks"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSpider" count="all">
+			<item group="BW19Loot_zombieSpiderTiered"/>
+			<item group="BW19Loot_zombieSpiderCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="865" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieSpider"/>
+		</lootcontainer>
+
+		<!-- zombieBurnt loot -->
+		<lootgroup name="BW19Loot_zombieBurntT0" loot_quality_template="QLTemplateT0">
+			<item name="modMeleeClubBurningShaft" prob="0.5"/>
+			<item name="foodCharredMeat" count="2,5"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBurntT1" loot_quality_template="QLTemplateT1" count="2">
+			<item name="ammoGasCanSchematic"/>
+			<item name="modMeleeClubBurningShaftSchematic"/>
+			<item name="ammoGasCan" count="200,300"/>
+			<item name="modMeleeFiremansAxeMod"/>
+			<item name="meleeToolAxeT1IronFireaxe" mods="modMeleeClubBurningShaft" mod_chance="1"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBurntT2" loot_quality_template="QLTemplateT2">
+			<item name="resourceOilShale" count="300,500"/>
+			<item name="armorFirefightersHelmet" mods="modArmorHelmetLight" mod_chance="1"/>
+			<item name="modMeleeClubBurningShaft"/>
+			<item name="modArmorHelmetLightSchematic"/>
+			<item name="bookFiremansAlmanacAxes"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBurntT3" loot_quality_template="QLTemplateT3" count="1">
+			<item name="ammoArrowFlaming" count="10,20"/>
+			<item name="ammoCrossbowBoltFlaming" count="10,20"/>
+			<item name="meleeToolAxeT2SteelAxe"/> <!-- considered T2 -->
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBurntTiered">
+			<item group="BW19Loot_zombieBurntT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieBurntT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieBurntT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieBurntT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_FiremansAlmanacBooks">
+			<item name="bookFiremansAlmanacSpeed"/>
+			<item name="bookFiremansAlmanacAxes"/>
+			<item name="bookFiremansAlmanacEquipment"/>
+			<item name="bookFiremansAlmanacPrevention"/>
+			<item name="bookFiremansAlmanacHarvest"/>
+			<item name="bookFiremansAlmanacHeat"/>
+			<item name="bookFiremansAlmanacMolotov"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBurntCommon" count="2">
+			<item name="resourceCoal" count="100,150"/>
+			<item group="BW19Loot_FiremansAlmanacBooks" prob=".2"/>
+			<item name="ammoGasCan" count="100,200"/>
+			<item name="resourceOilShale" count="100,200"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBurnt" count="all">
+			<item group="BW19Loot_zombieBurntTiered"/>
+			<item group="BW19Loot_zombieBurntCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="866" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieBurnt"/>
+		</lootcontainer>
+
+		<!-- zombieNurse loot -->
+		<lootgroup name="BW19Loot_zombieNurseT0" loot_quality_template="QLTemplateT0">
+			<item name="foodHoney" count="1"/>
+			<item name="medicalSplint" count="1,2"/>
+			<item name="medicalAloeCream" count="5,10"/>
+			<item name="drugSteroids" count="1,3"/>			
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieNurseT1" loot_quality_template="QLTemplateT1">
+			<item name="foodHoney" count="1,2"/>
+			<item name="medicalBloodBag" count="2,3"/>
+			<item name="medicalPlasterCast" count="1"/>
+			<item name="medicalFirstAidBandage" count="1,2"/>
+			<item name="drugVitamins" count="1,2"/>
+			<item name="drugPainkillers" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieNurseT2" loot_quality_template="QLTemplateT2">
+			<item name="foodSpaghetti" count="2,3"/>
+			<item name="medicalFirstAidKit" count="1,2"/>
+			<item name="drugAntibiotics" count="1,2"/>
+			<item name="drugSteroids" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieNurseT3" loot_quality_template="QLTemplateT3">
+			<item name="drugHealthBar" count="1,2"/>
+			<item name="drugRecog" count="1,2"/>
+			<item name="medicalFirstAidBandage" count="2,3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieNurseTiered">
+			<item group="BW19Loot_zombieNurseT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieNurseT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieNurseT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieNurseT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_HuntingJournalBooks">
+			<item name="bookHuntingJournalBears"/>
+			<item name="bookHuntingJournalCoyotes"/>
+			<item name="bookHuntingJournalDeer"/>
+			<item name="bookHuntingJournalMountainLions"/>
+			<item name="bookHuntingJournalVultures"/>
+			<item name="bookHuntingJournalWolves"/>
+			<item name="bookHuntingJournalSelfDefense"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieNurseCommon" count="2">
+			<item name="meleeToolFlashlight02"/>
+			<item name="toolBeaker"/>
+			<item name="resourceSnowBall" count="20,30"/>
+			<item name="resourceLeather" count="2,3"/>
+			<item name="resourceSewingKit" count="1,2"/>
+			<item name="resourceDuctTape" count="1,2"/>
+			<item name="resourceGunPowder" count="30,50"/>
+			<item group="BW19Loot_HuntingJournalBooks" loot_prob_template="probTemplate0.5"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieNurse" count="all">
+			<item group="BW19Loot_zombieNurseTiered"/>
+			<item group="BW19Loot_zombieNurseCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="867" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieNurse"/>
+		</lootcontainer>
+
+		<!-- zombieFatHawaiian loot -->
+		<lootgroup name="BW19Loot_zombieFatHawaiianT0" loot_quality_template="QLTemplateT0">
+			<item name="meleeWpnKnucklesT0LeatherKnuckles"/>
+			<item name="apparelShades"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieFatHawaiianT1" loot_quality_template="QLTemplateT1">
+			<item name="meleeWpnKnucklesT1IronKnuckles"/>
+			<item name="foodSteakAndPotato" count="2,3"/>
+			<item name="foodSteakAndPotatoSchematic"/>
+			<item name="resourceCropHopsFlower" count="2,3"/>
+			<item name="plantedHop1Schematic"/>
+			<item name="drinkJarBeer" count="2,3"/>
+			<item group="groupTreasureMaps"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFatHawaiianT2" loot_quality_template="QLTemplateT2">
+			<item name="foodSpaghettiSchematic"/>
+			<item name="foodSpaghetti" count="2,3"/>
+			<item name="gunBotT1JunkSledge"/> <!-- T1 -->
+			<item name="gunBotT2JunkTurret"/>
+			<item name="gunBotT1JunkSledgeSchematic"/>
+			<item name="gunBotT2JunkTurretSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFatHawaiianT3" loot_quality_template="QLTemplateT3">
+			<item name="meleeWpnKnucklesT1IronKnuckles"/>
+			<item name="shotgunTurretSchematic"/>
+			<item name="shotgunTurret"/>
+			<item name="autoTurretSchematic"/>
+			<item name="autoTurret"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFatHawaiianTiered">
+			<item group="BW19Loot_zombieFatHawaiianT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieFatHawaiianT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieFatHawaiianT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieFatHawaiianT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_TechJunkieBooks">
+			<item name="bookTechJunkie1Damage"/>
+			<item name="bookTechJunkie2Maintenance"/>
+			<item name="bookTechJunkie3APAmmo"/>
+			<item name="bookTechJunkie4Shells"/>
+			<item name="bookTechJunkie5Repulsor"/>
+			<item name="bookTechJunkie6BatonCharge"/>
+			<item name="bookTechJunkie7Hydraulics"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieFatHawaiianCommon" count="2,3">
+			<item group="BW19Loot_TechJunkieBooks"/>
+			<item name="foodCanBeef" count="2,3"/>
+			<item name="resourceAnimalFat" count="10,15"/>
+			<item name="foodCropPotato" count="2,3"/>
+			<item name="foodCanPasta" count="2,3"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item name="ammoShotgunShell" count="10,15"/>
+			<item name="ammoJunkTurretRegular" count="200,300"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFatHawaiian" count="all">
+			<item group="BW19Loot_zombieFatHawaiianTiered"/>
+			<item group="BW19Loot_zombieFatHawaiianCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="868" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieFatHawaiian"/>
+		</lootcontainer>
+
+		<!-- zombieFatCop loot -->
+		<lootgroup name="BW19Loot_zombieFatCopT0" loot_quality_template="QLTemplateT0">
+			<item group="groupArmorT1_Heavy"/>
+			<item name="meleeWpnBatonT2StunBaton"/>
+			<item name="resourcePaper" count="200,250"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieFatCopT1" loot_quality_template="QLTemplateT1" count="2">
+			<item name="gunHandgunT1Pistol"/>
+			<item name="gunHandgunT1PistolSchematic"/>
+			<item name="gunShotgunT1DoubleBarrel"/>
+			<item name="gunShotgunT1DoubleBarrelSchematic"/>
+			<item group="groupArmorT2_Heavy"/>
+			<item name="resourceGunPowder" count="100,200"/>
+			<item name="resourceRepairKit" count="2,5"/>
+			<item group="groupTreasureMaps"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFatCopT2" loot_quality_template="QLTemplateT2" count="2">
+			<item name="armorSwatHelmet" mod="modArmorHelmetLight" mod_chance="1"/>
+			<item name="modGunForegrip"/>
+			<item name="modGunRetractingStockSchematic"/>
+			<item name="modGunMeleeTheHunterSchematic"/>
+			<item name="modGunMeleeTheHunter"/>
+			<item name="armorSteelSetParts" count="2,3"/>
+			<item name="gunShotgunT2PumpShotgun"/>
+			<item name="gunShotgunT2PumpShotgunSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFatCopT3" loot_quality_template="QLTemplateT3">
+			<item name="drugNerdTats" count="1,2"/>
+			<item name="gunShotgunT3AutoShotgun"/>
+			<item name="gunShotgunT3AutoShotgunSchematic"/>
+			<item group="groupArmorT3_Heavy"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFatCopTiered">
+			<item group="BW19Loot_zombieFatCopT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieFatCopT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieFatCopT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieFatCopT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_UrbanCombatBooks">
+			<item name="bookUrbanCombatAdrenalineRush"/>
+			<item name="bookUrbanCombatCigar"/>
+			<item name="bookUrbanCombatRoomClearing"/>
+			<item name="bookUrbanCombatJumping"/>
+			<item name="bookUrbanCombatLandMines"/>
+			<item name="bookUrbanCombatLanding"/>
+			<item name="bookUrbanCombatSneaking"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieFatCopCommon" count="2,3">
+			<item name="foodPumpkinPie" count="1,3"/>
+			<item name="drinkJarCoffee" count="2,4"/>
+			<item name="foodCanChili" count="1,3"/>
+			<item group="BW19Loot_UrbanCombatBooks"/>
+			<item name="resourceMetalPipe" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item name="ammoShotgunShell" count="10,15"/>
+			<item name="oldCash" count="200,250"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFatCop" count="all">
+			<item group="BW19Loot_zombieFatCopTiered"/>
+			<item group="BW19Loot_zombieFatCopCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="869" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieFatCop"/>
+		</lootcontainer>
+
+		<!-- zombieMaleHazmat loot -->
+		<lootgroup name="BW19Loot_zombieMaleHazmatT0" loot_quality_template="QLTemplateT0" count="1,2">
+			<item name="foodCornBread" count="3,5"/>
+			<item name="gunShotgunT0Blunderbuss" prob=".2"/>
+			<item name="ammoBlunderbuss" count="10,15"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieMaleHazmatT1" loot_quality_template="QLTemplateT1">
+			<item name="drugHerbalAntibiotics" count="1,2"/>
+			<item name="modArmorWaterPurifier"/>
+			<item name="resourceSewingKit" count="2,3"/>
+			<item name="resourceDuctTape" count="2,3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMaleHazmatT2" loot_quality_template="QLTemplateT2">
+			<item name="modGunMeleeRadRemover"/>
+			<item name="modArmorWaterPurifierSchematic"/>
+			<item name="apparelAviatorGoggles"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMaleHazmatT3" loot_quality_template="QLTemplateT3">
+			<item name="modGunMeleeRadRemoverSchematic"/>
+			<item name="drugHealthBar" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMaleHazmatTiered">
+			<item group="BW19Loot_zombieMaleHazmatT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieMaleHazmatT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieMaleHazmatT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieMaleHazmatT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_HazMatClothes">
+			<item name="apparelHazmatBoots"/>
+			<item name="apparelHazmatGloves"/>
+			<item name="apparelHazmatMask"/>
+			<item name="apparelHazmatPants"/>
+			<item name="apparelHazmatJacket"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieMaleHazmatCommon" count="1,2">
+			<item name="foodBlueberryPie" count="1,2"/>
+			<item name="drinkJarGoldenRodTea" count="2,3"/>
+			<item name="drugVitamins" count="1,2"/>
+			<item name="resourceRepairKit" count="3,5"/>
+			<item name="resourceScrapPolymers" count="10,15"/>
+			<item group="BW19Loot_HazMatClothes"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieMaleHazmat" count="all">
+			<item group="BW19Loot_zombieMaleHazmatTiered"/>
+			<item group="BW19Loot_zombieMaleHazmatCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="870" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieMaleHazmat"/>
+		</lootcontainer>
+		
+		<!-- zombieUtilityWorker loot -->
+		<lootgroup name="BW19Loot_zombieUtilityWorkerT0" loot_quality_template="QLTemplateT0">
+			<item name="meleeToolShovelT0StoneShovel"/>
+			<item name="armorMiningHelmet" mods="modArmorHelmetLight" mod_chance="1"/>
+			<item name="meleeToolRepairT0StoneAxe"/>
+			<item name="resourceCobblestones" count="100,200"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_ArtOfMiningBooks">
+			<item name="bookArtOfMiningLuckyStrike"/>
+			<item name="bookArtOfMiningDiamondTools"/>
+			<item name="bookArtOfMiningCoffee"/>
+			<item name="bookArtOfMiningBlackStrap"/>
+			<item name="bookArtOfMiningPallets"/>
+			<item name="bookArtOfMiningAvalanche"/>
+			<item name="bookArtOfMiningLantern"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieUtilityWorkerT1" loot_quality_template="QLTemplateT1" count="2">
+			<item group="BW19Loot_ArtOfMiningBooks" prob=".1"/>
+			<item name="foodFishTacos" count="2,3"/>
+			<item name="meleeToolShovelT1IronShovel"/>
+			<item name="meleeToolPickT1IronPickaxe"/>
+			<item name="meleeToolRepairT1ClawHammer"/>
+			<item name="ammo762mmBulletBall" count="20,25"/>
+			<item name="gunMGT1AK47"/>
+			<item name="resourceForgedIron" count="10,20"/>
+			<item name="resourceConcreteMix" count="50,100"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieUtilityWorkerT2" loot_quality_template="QLTemplateT2">
+			<item group="groupArmorT2_Heavy"/>
+			<item name="meleeToolRepairT3Nailgun" prob=".2"/> <!-- T3, no T2 repair tool -->
+			<item name="meleeToolRepairT3NailgunSchematic" prob=".1"/>
+			<item name="foodShamChowder" count="2,3"/>
+			<item name="ammo762mmBulletHP" count="10,15"/>
+			<item name="meleeToolSalvageT2Ratchet"/>
+			<item name="resourceForgedSteel" count="10,20"/>
+			<item name="meleeToolPickT2SteelPickaxe"/>
+			<item name="gunMGT2TacticalAR"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieUtilityWorkerT3Actual" loot_quality_template="QLTemplateT3">
+			<item name="meleeToolPickT3Auger"/>
+			<item name="foodShepardsPie" count="2,3"/>
+			<item group="BW19Loot_ArtOfMiningBooks" prob=".8"/>
+			<item name="ammo762mmBulletAP" count="10,15"/>
+			<item name="meleeToolSalvageT3ImpactDriver"/>
+			<item name="meleeToolSalvageT3ImpactDriverSchematic"/>
+			<item name="meleeToolPickT3AugerSchematic"/>
+			<item name="gunMGT3M60"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieUtilityWorkerT3" count="all">
+			<item group="BW19Loot_zombieUtilityWorkerT3Actual"/>
+			<item group="forgeLoot"/>
+		</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieUtilityWorkerTiered">
+			<item group="BW19Loot_zombieUtilityWorkerT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieUtilityWorkerT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieUtilityWorkerT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieUtilityWorkerT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieUtilityWorkerCommon" count="2">
+			<item name="resourceDuctTape" count="2,3"/>
+			<item name="resourceGlue" count="2,3"/>
+			<item name="resourceCloth" count="5,8"/>
+			<item name="resourceMetalPipe" count="8,10"/>
+			<item name="resourceRockSmall" count="100,200"/>
+			<item name="resourceScrapIron" count="100,200"/>
+			<item name="resourceCement" count="50,75"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieUtilityWorker" count="all">
+			<item group="BW19Loot_zombieUtilityWorkerTiered"/>
+			<item group="BW19Loot_zombieUtilityWorkerCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="871" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieUtilityWorker"/>
+		</lootcontainer>
+
+		<!-- zombieSoldier loot -->
+		<lootgroup name="BW19Loot_zombieSoldierT0" loot_quality_template="QLTemplateT0">
+			<item name="gunShotgunT0Blunderbuss"/>
+			<item name="ammoBlunderbuss" count="10,15"/>
+			<item group="groupTreasureMaps"/>
+			<item group="groupArmorT1_Light"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSoldierT1" loot_quality_template="QLTemplateT1" count="2">
+			<item name="ammo44MagnumBulletBall" count="10,15"/>
+			<item name="ammo762mmBulletBall" count="10,15"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item group="modArmorT1"/>
+			<item name="modGunFlashlight"/>
+			<item group="groupArmorT2_Light"/>
+			<item name="modGunFlashlightSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_MilitaryArmorSet">
+			<item name="armorMilitaryBoots"/>
+			<item name="armorMilitaryGloves"/>
+			<item name="armorMilitaryHelmet"/>
+			<item name="armorMilitaryLegs"/>
+			<item name="armorMilitaryVest"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSoldierT2" loot_quality_template="QLTemplateT2" count="3">
+			<item group="modArmorT2"/>
+			<item name="thrownGrenade" count="10,15"/>
+			<item name="armorMilitarySetParts" count="2,3"/>
+			<item group="BW19Loot_MilitaryArmorSet"/>
+			<item name="modArmorBandolierSchematic"/>
+			<item name="modArmorBandolier"/>
+			<item name="drinkJarBlackStrapCoffee" count="1,2"/>
+			<item name="ammo44MagnumBulletHP" count="10,15"/>
+			<item name="ammo762mmBulletHP" count="10,15"/>
+			<item name="ammo9mmBulletHP" count="20,30"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSoldierT3" loot_quality_template="QLTemplateT3" count="2">
+			<item group="modArmorT3"/>
+			<item name="gunMGT3M60"/>
+			<item name="gunMGT2TacticalAR"/> <!-- T2 -->
+			<item name="gunShotgunT3AutoShotgun"/>
+			<item name="ammo44MagnumBulletAP" count="30,40"/>
+			<item name="ammo762mmBulletAP" count="30,40"/>
+			<item name="ammo9mmBulletAP" count="40,50"/>
+			<item name="gunHandgunT3SMG5"/>
+			</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieSoldierTiered">
+			<item group="BW19Loot_zombieSoldierT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieSoldierT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieSoldierT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieSoldierT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_AutoWeaponsBooks">
+			<item name="bookAutoWeaponsDamage"/>
+			<item name="bookAutoWeaponsRagdoll"/>
+			<item name="bookAutoWeaponsMaintenance"/>
+			<item name="bookAutoWeaponsRecoil"/>
+			<item name="bookAutoWeaponsDrumMag"/>
+			<item name="bookAutoWeaponsUncontrolledBurst"/>
+			<item name="bookAutoWeaponsMachineGuns"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSoldierCommon" count="2">
+			<item name="modGunFlashlight"/>
+			<item name="resourceGunPowder" count="50,100"/>
+			<item name="ammo9mmBulletBall" count="20,30"/>
+			<item name="ammoShotgunShell" count="10,15"/>
+			<item group="cannedfood" count="2,3"/>
+			<item group="BW19Loot_AutoWeaponsBooks"/>
+			<item name="resourceMilitaryFiber" count="5,7"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSoldier" count="all">
+			<item group="BW19Loot_zombieSoldierTiered"/>
+			<item group="BW19Loot_zombieSoldierCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="872" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieSoldier"/>
+		</lootcontainer>
+
+		<!-- zombieDemolition loot -->
+		<lootgroup name="BW19Loot_zombieDemolitionT0" loot_quality_template="QLTemplateT0">
+			<item name="ammoCrossbowBoltExploding" count="20,30"/>
+			<item name="ammoArrowExploding" count="20,30"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieDemolitionT1" loot_quality_template="QLTemplateT1" count="2">
+			<item name="ammoCrossbowBoltExploding" count="20,30"/>
+			<item name="ammoArrowExploding" count="20,30"/>
+			<item name="thrownAmmoPipeBomb" count="10,15"/>
+			<item name="thrownGrenadeContact" count="10,15"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieDemolitionT2" loot_quality_template="QLTemplateT2">
+			<item name="ammoRocketHE" count="5"/>
+			<item name="ammoRocketFrag" count="2"/>
+			<item name="gunExplosivesT3RocketLauncher"/> <!--T3 however demolition shows more at higher gamestage, so I believe it is irrelevant -->
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieDemolitionT3" loot_quality_template="QLTemplateT3">
+			<item name="gunExplosivesT3RocketLauncherSchematic"/>
+			<item name="drugAtomJunkies"/> 
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieDemolitionTiered">
+			<item group="BW19Loot_zombieDemolitionT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieDemolitionT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieDemolitionT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieDemolitionT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieDemolitionCommon" count="3">
+			<item name="thrownTimedCharge" count="2"/>
+			<item name="thrownDynamite" count="10,15"/>
+			<item name="resourceGunPowder" count="150,300"/>
+			<item name="thrownGrenade" count="10,15"/>
+			<item name="gunExplosivesT3RocketLauncherParts" count="2,4"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieDemolition" count="all">
+			<item group="BW19Loot_zombieDemolitionTiered"/>
+			<item group="BW19Loot_zombieDemolitionCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="873" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieDemolition"/>
+		</lootcontainer>
+
+		<!-- zombieSkateboarder loot -->
+		<lootgroup name="BW19Loot_zombieSkateboarderT0" loot_quality_template="QLTemplateT0">
+			<item group="groupArmorT1_Light"/>
+			<item name="apparelBallCap"/>
+			<item name="apparelDenimPants"/>
+			<item name="apparelFacialPiercings"/>
+			<item name="apparelShades"/>
+			<item name="gunBowT0PrimitiveBow"/>
+			<item name="ammoArrowIron" count="15,20"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSkateboarderT1" loot_quality_template="QLTemplateT1">
+			<item name="gunBowT1IronCrossbow"/>
+			<item name="resourceForgedSteel" count="10,15"/>
+			<item name="resourceRepairKit" count="5,10"/>
+			<item name="ammoCrossbowBoltIron" count="20,25"/>
+			<item name="thrownAmmoPipeBomb" count="10,20"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSkateboarderT2" loot_quality_template="QLTemplateT2">
+			<item group="groupArmorT2_Light"/>
+			<item name="vehicleWheels"/>
+			<item name="ammoCrossbowBoltSteelAP" count="20,25"/>
+			<item name="foodCanPasta" count="2,3"/>
+			<item name="foodCanBeef" count="2,3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSkateboarderT3" loot_quality_template="QLTemplateT3">
+			<item name="gunBowT3CompoundBow"/>
+			<item name="gunBowT3CompoundCrossbow"/>
+			<item name="ammoArrowSteelAP" count="20,25"/>
+			<item name="drugOhShitzDrops" count="1,2"/>
+			<item name="resourceForgedSteel" count="20,25"/>
+		</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieSkateboarderTiered">
+			<item group="BW19Loot_zombieSkateboarderT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieSkateboarderT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieSkateboarderT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieSkateboarderT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_RangersGuideBooks">
+			<item name="bookRangersArrowRecovery"/>
+			<item name="bookRangersCripplingShot"/>
+			<item name="bookRangersKnockdown"/>
+			<item name="bookRangersFlamingArrows"/>
+			<item name="bookRangersAPAmmo"/>
+			<item name="bookRangersExplodingBolts"/>
+			<item name="bookRangersForestGuide"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieSkateboarderCommon" count="2">
+			<item name="resourceWood" count="30,50"/>
+			<item name="resourceForgedIron" count="10,15"/>
+			<item name="resourceMetalPipe" count="10,15"/>
+			<item name="resourceMechanicalParts" count="2,3"/>
+			<item name="resourceSpring" count="1,2"/>
+			<item name="resourceGlue" count="1,2"/>
+			<item name="resourceDuctTape" count="2,3"/>
+			<item name="foodCanPeas" count="2,3"/>
+			<item group="BW19Loot_RangersGuideBooks" prob=".3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieSkateboarder" count="all">
+			<item group="BW19Loot_zombieSkateboarderTiered"/>
+			<item group="BW19Loot_zombieSkateboarderCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="874" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieSkateboarder"/>
+		</lootcontainer>
+
+		<!-- zombieCheerleader loot -->
+		<lootgroup name="BW19Loot_zombieCheerleaderT0" loot_quality_template="QLTemplateT0">
+			<item name="apparelRunningShoesRegular" mod="dyes"/>
+			<item name="modArmorStoragePocket"/>
+			<item name="modArmorStoragePocketSchematic"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieCheerleaderT1" loot_quality_template="QLTemplateT1">
+			<item name="medicalPlasterCast" count="1,2"/>
+			<item name="medicalPlasterCastSchematic"/>
+			<item name="modArmorDoubleStoragePocketSchematic"/>
+			<item name="modArmorDoubleStoragePocket"/>
+			<item name="drugFortBites" count="1,2"/>
+			<item group="groupTreasureMaps"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieCheerleaderT2" loot_quality_template="QLTemplateT2">
+			<item name="meleeWpnClubT1BaseballBat" quality="4"/>
+			<item name="drinkJarPureMineralWater" count="2,3"/>
+			<item name="drugOhShitzDrops"/>
+			<item name="meleeWpnClubT1BaseballBatSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieCheerleaderT3" loot_quality_template="QLTemplateT3">
+			<item name="meleeWpnClubT1BaseballBat" quality="6"/>
+			<item name="modArmorTripleStoragePocketSchematic"/>
+			<item name="modArmorTripleStoragePocket"/>
+			<item name="drugEyeKandy" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieCheerleaderTiered">
+			<item group="BW19Loot_zombieCheerleaderT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieCheerleaderT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieCheerleaderT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieCheerleaderT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieCheerleaderCommon" count="2">
+			<item name="resourceScrapBrass" count="75,150"/>
+			<item name="resourceCloth" count="10,15"/>
+			<item name="medicalSplint" count="2,3"/>
+			<item name="resourceTrophy1" count="2,3"/>
+			<item name="resourceTrophy2" count="2,3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieCheerleader" count="all">
+			<item group="BW19Loot_zombieCheerleaderTiered"/>
+			<item group="BW19Loot_zombieCheerleaderCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="875" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieCheerleader"/>
+		</lootcontainer>
+
+		<!-- zombieOldTimer loot -->
+		<lootgroup name="BW19Loot_zombieOldTimerT0" loot_quality_template="QLTemplateT0">
+			<item name="gunShotgunT0Blunderbuss"/>
+			<item name="ammoBlunderbuss" count="10,15"/>
+			<item name="apparelCowboyHat"/>
+			<item name="apparelOveralls"/>
+			<item name="modGunDuckbill"/>
+			<item name="modGunDuckbillSchematic"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieOldTimerT1" loot_quality_template="QLTemplateT1" count="1,2">
+			<item name="gunShotgunT1DoubleBarrel"/>
+			<item name="ammoShotgunShell" count="10,20"/>
+			<item name="foodBlueberryPie" count="2,3"/>
+			<item name="drinkJarGrandpasAwesomeSauce"/>
+			<item name="drinkJarGrandpasAwesomeSauceSchematic"/>
+			<item name="gunShotgunT1DoubleBarrelSchematic"/>
+			<item name="modGunChoke"/>
+			<item name="modGunChokeSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieOldTimerT2" loot_quality_template="QLTemplateT2" count="1,2">
+			<item name="drinkJarGrandpasMoonshine"/>
+			<item name="drinkJarGrandpasMoonshineSchematic"/>
+			<item name="gunShotgunT2PumpShotgun"/>
+			<item name="gunShotgunT2PumpShotgunSchematic"/>
+			<item name="ammoShotgunSlug" count="10,15"/>
+			<item name="foodShepardsPie" count="2,3"/>
+			<item name="modShotgunSawedOffBarrel"/>
+			<item name="modShotgunSawedOffBarrelSchematic"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieOldTimerT3" loot_quality_template="QLTemplateT3" count="1,2">
+			<item name="drinkJarGrandpasLearningElixirSchematic"/>
+			<item name="drinkJarGrandpasLearningElixir" prob=".2"/>
+			<item name="drinkJarGrandpasForgettingElixir" prob=".05"/>
+			<item name="gunShotgunT3AutoShotgun"/>
+			<item name="gunShotgunT3AutoShotgunSchematic"/>
+			<item name="ammoShotgunBreachingSlug" count="10,15"/>
+			<item name="drugSugarButts" count="1,2"/>
+		</lootgroup>
+			
+		<lootgroup name="BW19Loot_zombieOldTimerTiered">
+			<item group="BW19Loot_zombieOldTimerT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieOldTimerT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieOldTimerT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieOldTimerT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_ShotgunMessiahBooks">
+			<item name="bookShotgunMessiahBreachingSlugs"/>
+			<item name="bookShotgunMessiahDamage"/>
+			<item name="bookShotgunMessiahLimbShot"/>
+			<item name="bookShotgunMessiahMaintenance"/>
+			<item name="bookShotgunMessiahMagazine"/>
+			<item name="bookShotgunMessiahPartyStarter"/>
+			<item name="bookShotgunMessiahSlugs"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieOldTimerCommon" count="2">
+			<item name="foodCornMeal" count="5,10"/>
+			<item name="drinkCanEmpty" count="3,5"/>
+			<item name="drinkJarEmpty" count="2,3"/>
+			<item name="resourceMechanicalParts" count="2,3"/>
+			<item group="BW19Loot_ShotgunMessiahBooks" prob=".2"/>
+			<item name="apparelCoatLeatherPoncho"/>
+			<item name="apparelCoatLeatherDuster"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieOldTimer" count="all">
+			<item group="BW19Loot_zombieOldTimerTiered"/>
+			<item group="BW19Loot_zombieOldTimerCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="876" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieOldTimer"/>
+		</lootcontainer>
+
+		<!-- zombieBiker loot -->
+		<lootgroup name="BW19Loot_zombieBikerT0" loot_quality_template="QLTemplateT0">
+			<item name="gunShotgunT0Blunderbuss"/>
+			<item name="ammoBlunderbuss" count="10,15"/>
+			<item name="drinkJarBeer" count="1,2"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBikerT1" loot_quality_template="QLTemplateT1" count="1,2">
+			<item name="ammoShotgunShell" count="10,15"/>
+			<item group="modGunT1"/>
+			<item name="ammoGasCan" count="100,200"/>
+			<item name="armorLeatherSetSchematic"/>
+			<item name="resourceLeather" count="2,3"/>
+			<item name="foodCanChili" count="2,3"/>
+			<item name="resourceForgedIron" count="5,10"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBikerT2" loot_quality_template="QLTemplateT2">
+			<item name="meleeToolAxeT3ChainsawParts" count="2,4"/>
+			<item name="resourceForgedSteel" count="5,10"/>
+			<item name="drugHackers"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBikerT3" loot_quality_template="QLTemplateT3">
+			<item name="vehicleMotorcycleChassisSchematic"/>
+			<item name="vehicleMotorcycleHandlebarsSchematic"/>
+			<item name="ammoShotgunSlug" count="20,30"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBikerTiered">
+			<item group="BW19Loot_zombieBikerT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieBikerT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieBikerT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieBikerT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieBikerCommon" count="2,3">
+			<item name="apparelGothPants" mods="dye" mod_chance="1"/>
+			<item name="resourceOil" count="2,5"/>
+			<item name="resourceSpring" count="2,3"/>
+			<item name="resourceMechanicalParts" count="2,5"/>
+			<item name="modDyeBlack"/>
+			<item name="foodBaconAndEggs" count="2,5"/>
+			<item name="resourceAcid"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieBiker" count="all">
+			<item group="BW19Loot_zombieBikerTiered"/>
+			<item group="BW19Loot_zombieBikerCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="877" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieBiker"/>
+		</lootcontainer>
+
+		<!-- zombieFarmer loot -->
+		<lootgroup name="BW19Loot_zombieFarmerT0" loot_quality_template="QLTemplateT0">
+			<item name="foodEgg" count="10,20"/>
+			<item name="meleeToolRepairT0StoneAxe"/>
+			<item name="foodHoney" count="1,2"/>
+			<item name="gunShotgunT1DoubleBarrelParts" count="2,3"/>
+			<item group="groupArmorT1_Light"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieFarmerT1" loot_quality_template="QLTemplateT1">
+			<item name="foodVegetableStew" count="2,3"/>
+			<item name="smallEngine"/>
+			<item name="meleeToolPickT1IronPickaxe"/>
+			<item name="gunShotgunT1DoubleBarrel"/>
+			<item name="ammoShotgunShell" count="10,15"/>
+			<item group="groupArmorT2_Light"/>
+			<item name="modArmorPressboyCap"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFarmerT2" loot_quality_template="QLTemplateT2">
+			<item name="drinkJarBlackStrapCoffee" count="2,3"/>
+			<item name="plantedGraceCorn1" count="1,2"/>
+			<item name="meleeToolAllSteelParts" count="2,3"/>
+			<item name="gunShotgunT2PumpShotgun"/>
+			<item name="foodMeatStew" count="2,3"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFarmerT3" loot_quality_template="QLTemplateT3">
+			<item name="gunShotgunT3AutoShotgun"/>
+			<item name="drugRockBusters" count="1,2"/>
+			<item name="meleeToolPickT2SteelPickaxe"/> <!-- T2 -->
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieFarmerTiered">
+			<item group="BW19Loot_zombieFarmerT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieFarmerT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieFarmerT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieFarmerT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<!-- Art of Mining book group defined in zombieUtilityWorker -->
+
+		<lootgroup name="BW19Loot_zombieFarmerCommon" count="2">
+			<item name="foodEgg" count="10,20"/>
+			<item name="plantedCoffee1" count="1,2"/>
+			<item name="plantedCorn1" count="1,2"/>
+			<item name="plantedPotato1" count="1,2"/>
+			<item name="plantedBlueberry1" count="1,2"/>
+			<item group="BW19Loot_ArtOfMiningBooks"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieFarmer" count="all">
+			<item group="BW19Loot_zombieFarmerTiered"/>
+			<item group="BW19Loot_zombieFarmerCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="878" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieFarmer"/>
+		</lootcontainer>
+
+		<!-- zombieStripper loot -->
+		<lootgroup name="BW19Loot_zombieStripperT0" loot_quality_template="QLTemplateT0">
+			<item name="foodHoney" count="1,2"/>
+			<item name="drinkJarBeer" count="1,2"/>
+			<item name="foodEgg" count="5,10"/>	
+		</lootgroup>
+
+		<!-- Night Stalker books group defined in zombieBusinessMan -->
+
+		<lootgroup name="BW19Loot_zombieStripperT1" loot_quality_template="QLTemplateT1" count="2">
+			<item name="casinoCoin" count="150,300"/>
+			<item name="resourceOil" count="2,3"/>
+			<item name="oldCash" count="150,300"/>
+			<item name="foodFishTacos" count="2,3"/>
+			<item group="BW19Loot_NightStalkerBooks" prob="0.05"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieStripperT2" loot_quality_template="QLTemplateT2">
+			<item name="casinoCoin" count="300,450"/>
+			<item name="resourceOil" count="3,4"/>
+			<item name="oldCash" count="300,450"/>
+			<item name="foodChiliDog" count="2,3"/>
+			<item group="BW19Loot_NightStalkerBooks" prob="0.1"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieStripperT3" loot_quality_template="QLTemplateT3">
+			<item name="casinoCoin" count="450,600"/>
+			<item name="resourceOil" count="4,5"/>
+			<item name="oldCash" count="450,600"/>
+			<item name="drugEyeKandy" count="1,2"/>
+			<item group="BW19Loot_NightStalkerBooks" prob="0.15"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieStripperTiered">
+			<item group="BW19Loot_zombieStripperT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieStripperT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieStripperT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieStripperT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieStripperCommon" count="1,2">
+			<item name="casinoCoin" count="50,150"/>
+			<item name="resourceOil" count="1,2"/>
+			<item name="oldCash" count="100,150"/>
+			<item name="foodCanTuna" count="1,2"/>
+			<item name="foodCornOnTheCob" count="1,2"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieStripper" count="all">
+			<item group="BW19Loot_zombieStripperTiered"/>
+			<item group="BW19Loot_zombieStripperCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="879" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieStripper"/>
+		</lootcontainer>
+	</append>
+</configs>

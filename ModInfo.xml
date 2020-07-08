@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="BW19Loot" />
+		<Description value="Customized per zombie type loot drops based on backstories writte by Black Widow." />
+		<Author value="Black Widow, MrGrim" />
+		<Version value="0.1" />
+	</ModInfo>
+</xml>
