@@ -1,5 +1,54 @@
 <configs>
 	<append xpath="/lootcontainers">
+		<lootgroup name="BWLoot19_groupArmorT0_Heavy" loot_quality_template="QLTemplateT0">
+			<item name="armorScrapHelmet"/>
+			<item name="armorScrapChest"/>
+			<item name="armorScrapGloves"/>
+			<item name="armorScrapLegs"/>
+			<item name="armorScrapBoots"/>
+		</lootgroup>
+
+		<lootgroup name="BWLoot19_groupArmorT1_Heavy" loot_quality_template="QLTemplateT1">
+			<item name="armorIronGloves"/>
+			<item name="armorIronHelmet"/>
+			<item name="armorIronBoots"/>
+			<item name="armorIronLegs"/>
+			<item name="armorIronChest"/>
+		</lootgroup>
+
+		<lootgroup name="BWLoot19_groupArmorT2_Heavy" loot_quality_template="QLTemplateT2">
+			<item name="armorSteelBoots"/>
+			<item name="armorSteelLegs"/>
+			<item name="armorSteelChest"/>
+			<item name="armorSteelGloves"/>
+			<item name="armorSteelHelmet"/>
+			<item name="armorSwatHelmet" mods="modArmorHelmetLight" mod_chance=".2" prob=".4"/>
+		</lootgroup>
+		
+		<lootgroup name="BWLoot19_groupArmorT0_Light" loot_quality_template="QLTemplateT0">
+			<item name="armorClothPants"/>
+			<item name="armorClothJacket"/>
+			<item name="armorClothBoots"/>
+			<item name="armorClothGloves"/>
+			<item name="armorClothHat"/>
+		</lootgroup>
+
+		<lootgroup name="BWLoot19_groupArmorT1_Light" loot_quality_template="QLTemplateT1">
+			<item name="armorLeatherBoots"/>
+			<item name="armorLeatherPants"/>
+			<item name="armorLeatherChest"/>
+			<item name="armorLeatherGloves"/>
+			<item name="armorLeatherHood"/>
+		</lootgroup>
+
+		<lootgroup name="BWLoot19_groupArmorT2_Light" loot_quality_template="QLTemplateT2">
+			<item name="armorMilitaryGloves"/>
+			<item name="armorMilitaryHelmet" mods="modArmorHelmetLight" mod_chance=".2"/>
+			<item name="armorMilitaryBoots"/>
+			<item name="armorMilitaryLegs"/>
+			<item name="armorMilitaryVest"/>
+		</lootgroup>
+
 		<!-- zombieWight loot -->
 		<lootgroup name="BW19Loot_zombieWightT0" loot_quality_template="QLTemplateT0">
 			<item name="drugVitamins" count="1,2"/>
@@ -989,6 +1038,7 @@
 
 		<!-- zombieSnow loot -->
 		<lootgroup name="BW19Loot_zombieSnowT0" loot_quality_template="QLTemplateT0">
+			<item group="BWLoot19_groupArmorT0_Heavy"/>
 			<item name="meleeToolRepairT0StoneAxe"/>
 			<item name="resourceFeather" count="20,30"/>
 			<item name="foodVegetableStew" count="2,3"/>
@@ -996,7 +1046,7 @@
 		</lootgroup>
 
 		<lootgroup name="BW19Loot_zombieSnowT1" loot_quality_template="QLTemplateT1" count="2">
-			<item group="groupArmorT1_Heavy"/>
+			<item group="BWLoot19_groupArmorT1_Heavy"/>
 			<item name="drinkJarBeer" count="1,2"/>
 			<item name="foodVegetableStewSchematic"/>
 			<item name="meleeToolAxeT1IronFireaxe"/>
@@ -1011,7 +1061,7 @@
 		</lootgroup>
 				
 		<lootgroup name="BW19Loot_zombieSnowT2" loot_quality_template="QLTemplateT2">
-			<item group="groupArmorT2_Heavy"/>
+			<item group="BWLoot19_groupArmorT2_Heavy"/>
 			<item name="foodSteakAndPotato" count="2,3"/>
 			<item name="drinkYuccaJuiceSmoothie" count="2,3"/>
 			<item name="meleeToolAxeT2SteelAxe"/>
@@ -1024,7 +1074,6 @@
 		</lootgroup>
 		
 		<lootgroup name="BW19Loot_zombieSnowT3" loot_quality_template="QLTemplateT3">
-			<item group="groupArmorT3_Heavy"/>
 			<item name="gunRifleT3SniperRifle"/>
 			<item name="foodGumboStew" count="2,3"/>
 			<item name="drinkYuccaJuiceSmoothie" count="2,3"/>
@@ -1073,7 +1122,7 @@
 		<lootgroup name="BW19Loot_zombieSpiderT0" loot_quality_template="QLTemplateT0">
 			<item group="groupToolsT0"/>
 			<item group="seeds" count="1,2"/>
-			<item group="groupArmorT1_Light"/>
+			<item group="BWLoot19_groupArmorT0_Light"/>
 		</lootgroup>
 
 		<lootgroup name="BW19Loot_zombieSpiderT1" loot_quality_template="QLTemplateT1" count="2">
@@ -1082,7 +1131,7 @@
 			<item name="foodBaconAndEggs" count="2,3"/>
 			<item name="foodBaconAndEggsSchematic"/>
 			<item group="groupToolsT1"/>
-			<item group="groupArmorT2_Light"/>
+			<item group="BWLoot19_groupArmorT1_Light"/>
 			<item name="modArmorImpactBracing"/>
 		</lootgroup>
 		
@@ -1338,7 +1387,7 @@
 
 		<!-- zombieFatCop loot -->
 		<lootgroup name="BW19Loot_zombieFatCopT0" loot_quality_template="QLTemplateT0">
-			<item group="groupArmorT1_Heavy"/>
+			<item group="BWLoot19_groupArmorT0_Heavy"/>
 			<item name="meleeWpnBatonT2StunBaton"/>
 			<item name="resourcePaper" count="200,250"/>
 		</lootgroup>
@@ -1348,14 +1397,14 @@
 			<item name="gunHandgunT1PistolSchematic"/>
 			<item name="gunShotgunT1DoubleBarrel"/>
 			<item name="gunShotgunT1DoubleBarrelSchematic"/>
-			<item group="groupArmorT2_Heavy"/>
+			<item group="BWLoot19_groupArmorT1_Heavy"/>
 			<item name="resourceGunPowder" count="100,200"/>
 			<item name="resourceRepairKit" count="2,5"/>
 			<item group="groupTreasureMaps"/>
 		</lootgroup>
 		
 		<lootgroup name="BW19Loot_zombieFatCopT2" loot_quality_template="QLTemplateT2" count="2">
-			<item name="armorSwatHelmet" mod="modArmorHelmetLight" mod_chance="1"/>
+			<item group="BWLoot19_groupArmorT2_Heavy"/>
 			<item name="modGunForegrip"/>
 			<item name="modGunRetractingStockSchematic"/>
 			<item name="modGunMeleeTheHunterSchematic"/>
@@ -1369,7 +1418,6 @@
 			<item name="drugNerdTats" count="1,2"/>
 			<item name="gunShotgunT3AutoShotgun"/>
 			<item name="gunShotgunT3AutoShotgunSchematic"/>
-			<item group="groupArmorT3_Heavy"/>
 		</lootgroup>
 		
 		<lootgroup name="BW19Loot_zombieFatCopTiered">
@@ -1498,7 +1546,7 @@
 		</lootgroup>
 
 		<lootgroup name="BW19Loot_zombieUtilityWorkerT2" loot_quality_template="QLTemplateT2">
-			<item group="groupArmorT2_Heavy"/>
+			<item group="BWLoot19_groupArmorT2_Heavy"/>
 			<item name="meleeToolRepairT3Nailgun" prob=".2"/> <!-- T3, no T2 repair tool -->
 			<item name="meleeToolRepairT3NailgunSchematic" prob=".1"/>
 			<item name="foodShamChowder" count="2,3"/>
@@ -1556,7 +1604,7 @@
 			<item name="gunShotgunT0Blunderbuss"/>
 			<item name="ammoBlunderbuss" count="10,15"/>
 			<item group="groupTreasureMaps"/>
-			<item group="groupArmorT1_Light"/>
+			<item group="BWLoot19_groupArmorT0_Light"/>
 		</lootgroup>
 
 		<lootgroup name="BW19Loot_zombieSoldierT1" loot_quality_template="QLTemplateT1" count="2">
@@ -1565,7 +1613,7 @@
 			<item name="ammo9mmBulletBall" count="20,30"/>
 			<item group="modArmorT1"/>
 			<item name="modGunFlashlight"/>
-			<item group="groupArmorT2_Light"/>
+			<item group="BWLoot19_groupArmorT1_Light"/>
 			<item name="modGunFlashlightSchematic"/>
 		</lootgroup>
 		
@@ -1588,6 +1636,7 @@
 			<item name="ammo44MagnumBulletHP" count="10,15"/>
 			<item name="ammo762mmBulletHP" count="10,15"/>
 			<item name="ammo9mmBulletHP" count="20,30"/>
+			<item group="BWLoot19_groupArmorT2_Light"/>
 		</lootgroup>
 		
 		<lootgroup name="BW19Loot_zombieSoldierT3" loot_quality_template="QLTemplateT3" count="2">
@@ -1599,7 +1648,7 @@
 			<item name="ammo762mmBulletAP" count="30,40"/>
 			<item name="ammo9mmBulletAP" count="40,50"/>
 			<item name="gunHandgunT3SMG5"/>
-			</lootgroup>
+		</lootgroup>
 			
 		<lootgroup name="BW19Loot_zombieSoldierTiered">
 			<item group="BW19Loot_zombieSoldierT0" loot_prob_template="ProbT0"/>
@@ -1687,7 +1736,7 @@
 
 		<!-- zombieSkateboarder loot -->
 		<lootgroup name="BW19Loot_zombieSkateboarderT0" loot_quality_template="QLTemplateT0">
-			<item group="groupArmorT1_Light"/>
+			<item group="BWLoot19_groupArmorT0_Light"/>
 			<item name="apparelBallCap"/>
 			<item name="apparelDenimPants"/>
 			<item name="apparelFacialPiercings"/>
@@ -1702,10 +1751,10 @@
 			<item name="resourceRepairKit" count="5,10"/>
 			<item name="ammoCrossbowBoltIron" count="20,25"/>
 			<item name="thrownAmmoPipeBomb" count="10,20"/>
+			<item group="BWLoot19_groupArmorT1_Light"/>
 		</lootgroup>
 		
 		<lootgroup name="BW19Loot_zombieSkateboarderT2" loot_quality_template="QLTemplateT2">
-			<item group="groupArmorT2_Light"/>
 			<item name="vehicleWheels"/>
 			<item name="ammoCrossbowBoltSteelAP" count="20,25"/>
 			<item name="foodCanPasta" count="2,3"/>
@@ -1951,7 +2000,7 @@
 			<item name="meleeToolRepairT0StoneAxe"/>
 			<item name="foodHoney" count="1,2"/>
 			<item name="gunShotgunT1DoubleBarrelParts" count="2,3"/>
-			<item group="groupArmorT1_Light"/>
+			<item group="BWLoot19_groupArmorT0_Light"/>
 		</lootgroup>
 
 		<lootgroup name="BW19Loot_zombieFarmerT1" loot_quality_template="QLTemplateT1">
@@ -1960,7 +2009,7 @@
 			<item name="meleeToolPickT1IronPickaxe"/>
 			<item name="gunShotgunT1DoubleBarrel"/>
 			<item name="ammoShotgunShell" count="10,15"/>
-			<item group="groupArmorT2_Light"/>
+			<item group="BWLoot19_groupArmorT1_Light"/>
 			<item name="modArmorPressboyCap"/>
 		</lootgroup>
 		
