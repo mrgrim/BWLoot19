@@ -732,15 +732,11 @@
 	</append>
 
 	<!-- zombieDemolition loot -->
-	<append xpath="/entity_classes/entity_class[@name='zombieDemolition']">
-		<property name="LootDropProb" value=".30"/>
-	</append>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='LootDropProb']/@value">.30</set>
 	<!-- Missing <set xpath="/entity_classes/entity_class[@name='zombieDemolitionFeral']/property[@name='LootDropProb']/@value">.10</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieDemolitionRadiated']/property[@name='LootDropProb']/@value">.10</set> -->
 
-	<append xpath="/entity_classes/entity_class[@name='zombieDemolition']">
-		<property name="LootDropEntityClass" value="BW19Loot_zombieDemolition" />
-	</append>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='LootDropEntityClass']/@value">BW19Loot_zombieDemolition</set>
 	<!-- missing <append xpath="/entity_classes/entity_class[@name='zombieDemolitionFeral']">
 		<property name="LootDropEntityClass" value="BW19Loot_zombieDemolition" />
 	</append>
