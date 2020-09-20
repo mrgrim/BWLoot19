@@ -928,6 +928,37 @@
 		</entity_class>
 	</append>
 
+	<!-- zombieJanitor loot -->
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitor']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	<set xpath="/entity_classes/entity_class[@name='zombieJanitorFeral']/property[@name='LootDropProb']/@value">.10</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieJanitorRadiated']/property[@name='LootDropProb']/@value">.10</set>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitor']">
+		<property name="LootDropEntityClass" value="BW19Loot_zombieJanitor" />
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitorFeral']">
+		<property name="LootDropEntityClass" value="BW19Loot_zombieJanitor" />
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitorRadiated']">
+		<property name="LootDropEntityClass" value="BW19Loot_zombieJanitor" />
+	</append>
+	
+	<append xpath="/entity_classes">
+		<entity_class name="BW19Loot_zombieJanitor">
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1800"/>
+			<property name="LootListOnDeath" value="880"/>
+			<property name="Faction" value="none"/>
+		</entity_class>
+	</append>
+
 <!-- Changes lifetime of zombie loot bags -->
 	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='TimeStayAfterDeath']/@value">1800</set>
 	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerStrong']/property[@name='TimeStayAfterDeath']/@value">1800</set>

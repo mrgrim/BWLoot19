@@ -2110,5 +2110,68 @@
 		<lootcontainer id="879" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="BW19Loot_zombieStripper"/>
 		</lootcontainer>
+
+		<!-- zombieJanitor loot -->
+		<lootgroup name="BW19Loot_zombieJanitorT0" loot_quality_template="QLTemplateT0">
+			<item name="apparelBandana" count="1"/>
+			<item name="meleeToolPaintTool" count="1"/>
+			<item name="medicalSplint" count="1,3"/>
+			<item name="foodCornBread" count="5,10"/>
+			<item name="modArmorWaterPurifier" count="1"/>
+			<item group="farmingCookingRecipesT0" count="1"/>	
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieJanitorT1" loot_quality_template="QLTemplateT1" count="2">
+			<item name="cntWaterCoolerBottle" count="1"/>
+			<item name="medicalFirstAidBandage" count="2,3"/>
+			<item name="foodChiliDog" count="2,4"/>
+			<item name="drinkJarGrainAlcohol" count="5,10"/>
+			<item name="modArmorHelmetLight" count="1"/>
+			<item group="farmingCookingRecipesT1" count="1"/>	
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieJanitorT2" loot_quality_template="QLTemplateT2">
+			<item name="lanternLight_player" count="2,5"/>
+			<item name="medicalFirstAidKit" count="2,5"/>
+			<item name="foodShepardsPie" count="2,3"/>
+			<item name="drinkJarGrandpasMoonshine" count="2,3"/>
+			<item name="modArmorTripleStoragePocket" count="1"/>
+			<item group="farmingCookingRecipesT2" count="1"/>	
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieJanitorT3" loot_quality_template="QLTemplateT3">
+			<item name="cntJanitorCartFull" count="1"/>
+			<item name="drugRecog" count="2,4"/>
+			<item name="foodGumboStew" count="2,3"/>
+			<item name="drinkJarGrandpasLearningElixir" count="2,3"/>
+			<item name="modArmorCustomizedFittings" count="1"/>
+			<item group="perkBooks" count="1"/>
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieJanitorTiered">
+			<item group="BW19Loot_zombieJanitorT0" loot_prob_template="ProbT0"/>
+			<item group="BW19Loot_zombieJanitorT1" loot_prob_template="ProbT1"/>
+			<item group="BW19Loot_zombieJanitorT2" loot_prob_template="ProbT2"/>
+			<item group="BW19Loot_zombieJanitorT3" loot_prob_template="ProbT3"/>
+		</lootgroup>
+
+		<lootgroup name="BW19Loot_zombieJanitorCommon" count="1,2">
+			<item name="medicalBandage" count="1,3"/>
+			<item name="foodCanChili" count="1,3"/>
+			<item name="foodCanBeef" count="2,3"/>	
+			<item name="drinkJarBeer" count="1,3"/>	
+			<item name="resourceAcid" count="1,2"/>
+			<item name="resourceScrapPolymers" count="20,30"/>	
+			<item name="resourceCloth" count="5,10"/>	
+		</lootgroup>
+		
+		<lootgroup name="BW19Loot_zombieJanitor" count="all">
+			<item group="BW19Loot_zombieJanitorTiered"/>
+			<item group="BW19Loot_zombieJanitorCommon"/>
+		</lootgroup>
+		
+		<lootcontainer id="880" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="BW19Loot_zombieJanitor"/>
+		</lootcontainer>
 	</append>
 </configs>
